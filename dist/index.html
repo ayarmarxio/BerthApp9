@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BerthApp</title>
+    <link rel="stylesheet" type="text/css" href="/styles.8986bff4.css">
+    <link href="https://fonts.googleapis.com/css?family=Kodchasan|Roboto|Jura" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Jquery Set up-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>$(function () {
+  $("#datepickerfrom").datepicker();
+});</script>
+    <script>$(function () {
+  $("#datepickerto").datepicker();
+});</script>
+<script src="/styles.8986bff4.js"></script><link rel="stylesheet" href="/BerthApp9.77de5100.css"></head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <img src="/BerthAppIcon.cf7a9fd4.png" id="icon-berthapp">
+            <label id="logotext">BerthApp</label>
+        </div>
+        <div id="nav-btn-container">
+            <button id="log-in-btn">Login</button>
+            <div class="login-input">
+                <img src="/userIconW.5a868ca4.png" class="login-icon">
+                <input type="text" id="insertCodeTextBox" class="input-user" placeholder="Username">
+            </div>
+            <div class="login-input">
+                <img src="/lockIconW.c34d26eb.png" class="login-icon">
+                <input type="password" id="insertPasswordTextBox" class="input-user" placeholder="Password">
+            </div>
+        </div>
+    </nav>
+    <div id="container">
+        <div id="drawer" class="nested">
+            <form id="indicators-form">
+                <label id="form-title">Give Yourself</label>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/mapIconW.d03f42a4.png">
+                    <span type="text" id="location-span" placeholder="click on map">click the map</span>
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/bloodPressurew.e6832e40.png">
+                    <input class="input-item" type="text" id="" placeholder="blood pressure">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/BodyTemperatureIconW.b99069d9.png">
+                    <input class="input-item" type="text" id="" placeholder="body temperature">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/HeartBeatIconW.badbd861.png">
+                    <input class="input-item" type="text" id="" placeholder="heart beat">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/dustIconW.4770d8c3.png">
+                    <input class="input-item" type="text" id="" placeholder="dust percentage">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/sulfurIconW.993fd816.png">
+                    <input class="input-item" type="text" id="" placeholder="sulphur dioxide">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/nitrogen.0c721848.png">
+                    <input class="input-item" type="text" id="" placeholder="oxidized nitrogen">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/fluorIconW.42c74160.png">
+                    <input class="input-item" type="text" id="" placeholder="fluor">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/carbonoIconW.349d62f6.png">
+                    <input class="input-item" type="text" id="" placeholder="carbon monoxide">
+                </div>
+                <div class="indicator-input">
+                    <img class="indicator-icon" src="/OzoneIconW.8d314048.png">
+                    <input class="input-item" type="text" id="" placeholder="ozone percentage">
+                </div>
+                <button type="submit" id="btn-submit">Save
+            </button></form>
+            <div id="filter">
+                <label id="filter-title">Find Yourself</label>
+                <div class="datepicker-item" id="datepicker-from">
+                    <label class="dp-labels">From</label>
+                    <img src="/calendarIconD.b8503e4b.png" class="calendar-icon">
+                    <input type="text" id="datepickerfrom">
+                </div>
+                <div class="datepicker-item" id="datepicker-to">
+                    <label class="dp-labels">To</label>
+                    <img src="/calendarIconD.b8503e4b.png" class="calendar-icon">
+                    <input type="text" id="datepickerto">
+                </div>
+            </div>
+        </div>
+        <div id="centerview">
+            <div id="map"></div>
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="pollution-view">
+            <canvas class="pollution-chart" id="dp-chart">dp-chart</canvas>
+            <canvas class="pollution-chart" id="sp-chart">sp-chart</canvas>
+            <canvas class="pollution-chart" id="op-chart">op-chart</canvas>
+            <canvas class="pollution-chart" id="fluor-chart">fluor-chart</canvas>
+            <canvas class="pollution-chart" id="cmp-chart">cmp-chart</canvas>
+            <canvas class="pollution-chart" id="oz-chart">oz-chart</canvas>
+        </div>
+    </div>
+    <script src="/BerthApp9.77de5100.js"></script>
+</body>
+
+</html>
